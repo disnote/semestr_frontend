@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEPHI — lab3_8</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #fff;
+            color: #000;
+        }
+
+        .page-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        main.page-inner {
+            padding-bottom: 2rem;
+        }
+
+        .logo {
+            margin: 0;
+            padding: 1.75rem 1rem;
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .bar {
+            width: 100%;
+            background: #eee;
+            text-align: center;
+            padding: 1rem 1rem;
+        }
+
+        .bar nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 1.25rem;
+        }
+
+        .bar a {
+            color: #6b21a8;
+            text-decoration: underline;
+        }
+
+        .bar a:hover {
+            color: #4c1d95;
+        }
+
+        .feature {
+            margin-top: 1.25rem;
+            min-height: 220px;
+            background: #eee;
+            text-align: center;
+            padding: 1.25rem 1rem;
+        }
+
+        .feature h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        @media (max-width: 640px) {
+            .columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .column {
+            background: #eee;
+            text-align: center;
+            padding: 1.25rem 1rem;
+            min-height: 120px;
+        }
+
+        .column h3 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        footer.bar {
+            margin-top: 1.25rem;
+            margin-bottom: 0;
+        }
+
+        footer.bar p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="page-inner">
+            <p class="logo">Логотип</p>
+        </div>
+    </header>
+
+    <div class="bar">
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="#">Домой</a></li>
+                <li><a href="#">Товары</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="page-inner">
+        <section class="feature" aria-labelledby="feature-title">
+            <h2 id="feature-title">Характеристика</h2>
+        </section>
+
+        <div class="columns">
+            <section class="column" aria-labelledby="col1">
+                <h3 id="col1">Колонка 1</h3>
+            </section>
+            <section class="column" aria-labelledby="col2">
+                <h3 id="col2">Колонка 2</h3>
+            </section>
+            <section class="column" aria-labelledby="col3">
+                <h3 id="col3">Колонка 3</h3>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bar">
+        <p>© MEPHI 2023</p>
+    </footer>
+</body>
+
+</html>

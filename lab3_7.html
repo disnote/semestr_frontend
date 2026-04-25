@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Круг из div — lab3_7</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, sans-serif;
+            background: #fafafa;
+            color: #18181b;
+        }
+
+        .hint {
+            margin: 0;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
+        .blue-circle {
+            position: fixed;
+            left: 50vw;
+            top: 50vh;
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            border-radius: 30px;
+            background-color: #2563eb;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .example_table {
+            border-collapse: collapse;
+            border: 1px solid #000;
+            margin-top: 1em;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 6px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hint">Синий круг из <code>&lt;div&gt;</code> (радиус 30px) следует за курсором.</p>
+    <div class="blue-circle" aria-hidden="true"></div>
+    <script src="lab3_7.js"></script>
+
+    <table class="example_table">
+        <tr>
+            <td colspan="2">1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+</body>
+
+</html>

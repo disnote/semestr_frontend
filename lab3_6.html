@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню — lab3_6</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-padding-top: 56px;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            color: #18181b;
+            background: #fafafa;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: #94c3e0;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+
+        }
+
+        .nav {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .nav a {
+            display: block;
+            padding: 0.85rem 1rem;
+            color: #22257a;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+            border-radius: 6px;
+        }
+
+        .nav a:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav a:focus-visible {
+            outline: 2px solid #60a5fa;
+            outline-offset: 2px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 5rem 1rem 3rem;
+        }
+
+        main h1 {
+            margin-top: 0;
+            font-size: 1.75rem;
+            color: #425af5;
+        }
+
+        main section {
+            margin-bottom: 2.5rem;
+            padding: 1.25rem 1.5rem;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #e4e4e7;
+        }
+
+        main section h2 {
+            margin-top: 0;
+            font-size: 1.15rem;
+            color: #425af5;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Основное меню">
+            <ul>
+                <li><a href="#glavnaya">Главная</a></li>
+                <li><a href="#katalog">Каталог</a></li>
+                <li><a href="#kontakty">Контакты</a></li>
+                <li><a href="#o-nas">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Демонстрация фиксированного меню</h1>
+        <p>Прокрутите страницу вниз — полоса меню остаётся вверху окна.</p>
+
+        <section id="glavnaya">
+            <h2>Главная</h2>
+            <p>Краткое приветствие и основные новости сайта. Здесь размещают важные объявления и ссылки на актуальные
+                разделы.</p>
+        </section>
+
+        <section id="katalog">
+            <h2>Каталог</h2>
+            <p>Список товаров или услуг с фильтрами и карточками. Удобная навигация помогает пользователю быстро найти
+                нужное.</p>
+        </section>
+
+        <section id="kontakty">
+            <h2>Контакты</h2>
+            <p>Адрес, телефон, форма обратной связи и карта проезда. Через этот блок посетители связываются с компанией.
+            </p>
+        </section>
+
+        <section id="o-nas">
+            <h2>О нас</h2>
+            <p>История компании, миссия и команда. Такой раздел повышает доверие и знакомит с ценностями бренда.</p>
+        </section>
+
+        <section>
+            <h2>Дополнительный блок</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.</p>
+        </section>
+    </main>
+</body>
+
+</html>

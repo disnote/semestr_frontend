@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тип устройства по ширине окна</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, sans-serif;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            background: #fafafa;
+            color: #18181b;
+        }
+
+        .label {
+            font-weight: 600;
+        }
+
+        .label--mobile {
+            display: inline;
+        }
+
+        .label--tablet,
+        .label--desktop {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .label--mobile {
+                display: none;
+            }
+
+            .label--tablet {
+                display: inline;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .label--tablet {
+                display: none;
+            }
+
+            .label--desktop {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p class="label" aria-live="polite">
+        <span class="label--mobile">Mobile</span>
+        <span class="label--tablet">Tablet</span>
+        <span class="label--desktop">Desktop</span>
+    </p>
+</body>
+
+</html>

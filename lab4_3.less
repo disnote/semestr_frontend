@@ -1,0 +1,123 @@
+// Калькулятор — те же стили, что lab4_2.scss, синтаксис Less. Сборка: npx lessc lab4_3.less lab4_3.css
+
+@bg-page: #e4e4e7;
+@text: #18181b;
+@text-muted: #52525b;
+@calc-bg: #fafafa;
+@calc-shadow: rgba(0, 0, 0, 0.12);
+@border-input: #d4d4d8;
+@focus-ring: #2563eb;
+@btn-default-bg: #e4e4e7;
+@btn-default-hover: #d4d4d8;
+@op-bg: #dbeafe;
+@op-color: #1e40af;
+@op-hover: #bfdbfe;
+@eq-bg: #2563eb;
+@eq-hover: #1d4ed8;
+@clear-bg: #fecaca;
+@clear-color: #991b1b;
+@clear-hover: #fca5a5;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, sans-serif;
+    background: @bg-page;
+    color: @text;
+}
+
+.calc {
+    width: ~"min(100% - 2rem, 280px)";
+    padding: 1rem;
+    border-radius: 12px;
+    background: @calc-bg;
+    box-shadow: 0 8px 24px @calc-shadow;
+
+    h1 {
+        margin: 0 0 0.75rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        color: @text-muted;
+    }
+}
+
+#display {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    font-size: 1.35rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    border: 1px solid @border-input;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 0.75rem;
+
+    &:focus {
+        outline: 2px solid @focus-ring;
+        outline-offset: 1px;
+    }
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+
+    button {
+        font: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.65rem 0;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: @btn-default-bg;
+        color: @text;
+
+        &:hover {
+            background: @btn-default-hover;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    .op {
+        background: @op-bg;
+        color: @op-color;
+
+        &:hover {
+            background: @op-hover;
+        }
+    }
+
+    .eq {
+        background: @eq-bg;
+        color: #fff;
+        grid-column: span 2;
+
+        &:hover {
+            background: @eq-hover;
+        }
+    }
+
+    .clear {
+        background: @clear-bg;
+        color: @clear-color;
+
+        &:hover {
+            background: @clear-hover;
+        }
+    }
+}

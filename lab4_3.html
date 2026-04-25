@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор — lab4_3 (Less)</title>
+    <link rel="stylesheet" href="lab4_3.css">
+</head>
+
+<body>
+    <div class="calc">
+        <h1>Калькулятор</h1>
+        <input type="text" id="display" readonly value="" inputmode="none" autocomplete="off"
+            aria-label="Результат и выражение">
+        <div class="keys" role="group" aria-label="Кнопки калькулятора">
+            <button type="button" class="op" data-append="(">(</button>
+            <button type="button" class="op" data-append=")">)</button>
+            <button type="button" class="clear" data-action="clear">C</button>
+            <button type="button" class="op" data-append="/">/</button>
+
+            <button type="button" data-append="7">7</button>
+            <button type="button" data-append="8">8</button>
+            <button type="button" data-append="9">9</button>
+            <button type="button" class="op" data-append="*">*</button>
+
+            <button type="button" data-append="4">4</button>
+            <button type="button" data-append="5">5</button>
+            <button type="button" data-append="6">6</button>
+            <button type="button" class="op" data-append="-">-</button>
+
+            <button type="button" data-append="1">1</button>
+            <button type="button" data-append="2">2</button>
+            <button type="button" data-append="3">3</button>
+            <button type="button" class="op" data-append="+">+</button>
+
+            <button type="button" data-append="0">0</button>
+            <button type="button" class="eq" data-action="equals">=</button>
+        </div>
+    </div>
+
+    <script src="lab3_3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5_3 Подключение Vue.js</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 56rem;
+            margin: 1rem auto;
+            padding: 0 1rem;
+            line-height: 1.5;
+        }
+
+        .button {
+            background-color: #4c84af;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #message {
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        #title {
+            font-size: 25px;
+            color: #4c84af;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Подключение Vue.js</h1>
+
+    <div id="app">
+        <button class="button" @click="onClick">Click me</button>
+        <p id="message"> {{ message }}</p>
+
+        <p id="message"> Очки Гриффиндора: {{ count }}</p>
+        <button class="button" @click="increment">+ 1 балл Гриффинору</button>
+    </div>
+
+    <script type="module" src="lab5_3.js"></script>
+</body>
+
+</html>

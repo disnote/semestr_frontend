@@ -1,0 +1,37 @@
+{
+  "name": "frontend.projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:lab4": "npx sass --no-source-map lab4_1.scss lab4_1.css",
+    "watch:lab4": "npx sass --no-source-map --watch lab4_1.scss lab4_1.css",
+    "build:lab4-2": "npx sass --no-source-map lab4_2.scss lab4_2.css",
+    "watch:lab4-2": "npx sass --no-source-map --watch lab4_2.scss lab4_2.css",
+    "build:lab4-3": "npx -p less lessc lab4_3.less lab4_3.css",
+    "watch:lab4-3": "npx -p less lessc --watch lab4_3.less lab4_3.css",
+    "build:lab4-4": "npx -p typescript tsc lab4_4.ts --target ES2019 --module none --outFile lab4_4.js",
+    "watch:lab4-4": "npx -p typescript tsc lab4_4.ts --target ES2019 --module none --outFile lab4_4.js --watch --preserveWatchOutput",
+    "lab5:vk-node": "node lab5_2_node.mjs",
+    "dev:local": "vite --mode loclal"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rolldown/binding-linux-x64-gnu": "^1.0.0-rc.17",
+    "axios": "^1.15.2",
+    "node": "20.19",
+    "pixi.js": "^8.18.1",
+    "puppeteer": "^24.38.0",
+    "vue": "^3.5.33"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "sass": "^1.85.0",
+    "typescript": "^5.6.3",
+    "vite": "^8.0.10"
+  }
+}

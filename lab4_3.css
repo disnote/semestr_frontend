@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+  background: #e4e4e7;
+  color: #18181b;
+}
+.calc {
+  width: min(100% - 2rem, 280px);
+  padding: 1rem;
+  border-radius: 12px;
+  background: #fafafa;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.calc h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #52525b;
+}
+#display {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-size: 1.35rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 0.75rem;
+}
+#display:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+}
+.keys button {
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.65rem 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #e4e4e7;
+  color: #18181b;
+}
+.keys button:hover {
+  background: #d4d4d8;
+}
+.keys button:active {
+  transform: scale(0.97);
+}
+.keys .op {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.keys .op:hover {
+  background: #bfdbfe;
+}
+.keys .eq {
+  background: #2563eb;
+  color: #fff;
+  grid-column: span 2;
+}
+.keys .eq:hover {
+  background: #1d4ed8;
+}
+.keys .clear {
+  background: #fecaca;
+  color: #991b1b;
+}
+.keys .clear:hover {
+  background: #fca5a5;
+}

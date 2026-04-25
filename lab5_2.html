@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5_2 — Axios GET к vk.com (браузер)</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 56rem;
+            margin: 1rem auto;
+            padding: 0 1rem;
+            line-height: 1.5;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            overflow: auto;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Axios: GET https://vk.com в браузере</h1>
+    <p>
+        Страница подключает Axios из <code>node_modules</code> (после <code>npm install</code>).
+        Удобнее открыть через локальный HTTP-сервер из корня проекта, например
+        <code>npx --yes serve .</code>, затем перейти к этому файлу.
+    </p>
+    <p>
+        <strong>CORS: </strong> запрос к другому origin (vk.com) из вашей страницы разрешён только если
+        сервер отдаёт заголовок <code>Access-Control-Allow-Origin</code> с вашим origin.
+        У публичной главной VK этого обычно нет — в консоли/ниже ожидается сетевая ошибка
+        (браузер блокирует чтение ответа), хотя сам HTTP-запрос мог уйти.
+    </p>
+    <h2>Результат</h2>
+    <pre id="log"></pre>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="lab5_2_browser.js"></script>
+</body>
+
+</html>

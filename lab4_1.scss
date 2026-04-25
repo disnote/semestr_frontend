@@ -1,0 +1,133 @@
+$bg-page: #fff;
+$text-main: #000;
+$bar-bg: #eee;
+$link-color: #6b21a8;
+$link-hover: #4c1d95;
+$container-max: 900px;
+
+@mixin box-sizing-global {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+}
+
+@mixin container {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@mixin bar-strip {
+    width: 100%;
+    background: $bar-bg;
+    text-align: center;
+    padding: 1rem;
+}
+
+@mixin flex-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+}
+
+@mixin nav-link {
+    color: $link-color;
+    text-decoration: underline;
+
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+@include box-sizing-global;
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: $bg-page;
+    color: $text-main;
+}
+
+.page-inner {
+    @include container;
+}
+
+main.page-inner {
+    padding-bottom: 2rem;
+}
+
+.logo {
+    margin: 0;
+    padding: 1.75rem 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.bar {
+    @include bar-strip;
+
+    nav {
+        ul {
+            @include flex-nav-list;
+        }
+
+        a {
+            @include nav-link;
+        }
+    }
+}
+
+.feature {
+    margin-top: 1.25rem;
+    min-height: 220px;
+    background: $bar-bg;
+    text-align: center;
+    padding: 1.25rem 1rem;
+
+    h2 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.25rem;
+
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.column {
+    background: $bar-bg;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    min-height: 120px;
+
+    h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+footer.bar {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+
+    p {
+        margin: 0;
+    }
+}

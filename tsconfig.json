@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "none",
+        "outFile": "./lab4_4.js",
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "files": [
+        "lab4_4.ts"
+    ]
+}

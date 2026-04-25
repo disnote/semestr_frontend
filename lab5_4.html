@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5_4 Кликер (Vue)</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 56rem;
+            margin: 1rem auto;
+            padding: 0 1rem;
+            line-height: 1.5;
+        }
+
+        .card {
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 1rem;
+            max-width: 20rem;
+        }
+
+        button {
+            padding: 0.6rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="card">
+        <h1>Кликер</h1>
+        <p>Очки: {{ count }}</p>
+        <button @click="increment">+1 очко</button>
+    </div>
+
+    <script type="module" src="lab5_4.js"></script>
+</body>
+
+</html>
